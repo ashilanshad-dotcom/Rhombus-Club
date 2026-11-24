@@ -155,7 +155,8 @@ footer a:hover{color:var(--red)}
   .feature{grid-template-columns:1fr}
   .feature-symbol{display:none}
 }
-</style>
+  </style>
+<link rel="stylesheet" href="music.css">
 </head>
 
 <body>
@@ -325,6 +326,26 @@ footer a:hover{color:var(--red)}
   <br><br>
   © 2026 RHOMBUS CLUB. ALL RIGHTS RESERVED.
 </footer>
+<div class="music-player">
+  <audio id="rhombusThemeAudio"
+         src="rhombus-theme.mp3"
+         loop
+         preload="none"></audio>
 
+  <button class="music-button"
+          id="rhombusMusicButton"
+          type="button"
+          aria-label="Play club theme music"
+          aria-pressed="false">
+
+    <span class="music-icon" id="rhombusMusicIcon">▶</span>
+    <span id="rhombusMusicLabel">PLAY THEME</span>
+
+  </button>
+
+  <span class="music-caption">RHOMBUS CLUB THEME</span>
+</div>
+
+<script src="music.js"></script>
 </body>
 </html>
