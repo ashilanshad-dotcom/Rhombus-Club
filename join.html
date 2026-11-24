@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join RHOMBUS CLUB on Chess.com. Think. Play. Shine.">
+  <title>Join RHOMBUS CLUB</title>
+
+  <link rel="stylesheet" href="music.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(160, 0, 35, 0.28), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(190, 0, 45, 0.18), transparent 35%),
+        #080808;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .brand {
+      color: #ff3158;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.25s;
+    }
+
+    nav a:hover {
+      color: #ff3158;
+    }
+
+    main {
+      min-height: 76vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 65px 20px;
+    }
+
+    .join-card {
+      width: 100%;
+      max-width: 760px;
+      padding: 58px 35px;
+      text-align: center;
+      border: 1px solid rgba(255, 45, 85, 0.35);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.045);
+      box-shadow: 0 0 55px rgba(180,0,40,0.13);
+      backdrop-filter: blur(14px);
+    }
+
+    .symbol {
+      color: #ff3158;
+      font-size: 58px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 54px);
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: #ff3158;
+    }
+
+    .tagline {
+      color: #ff8da4;
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .description {
+      color: #c9c9c9;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 570px;
+      margin: 0 auto 32px;
+    }
+
+    .join-button {
+      display: inline-block;
+      padding: 16px 34px;
+      border-radius: 10px;
+      background: linear-gradient(120deg, #b90032, #ff3158);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 0 25px rgba(255, 35, 80, 0.28);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .join-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 35px rgba(255, 35, 80, 0.5);
+    }
+
+    .note {
+      color: #999;
+      font-size: 12px;
+      margin-top: 22px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 15px;
+      color: #888;
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .join-card {
+        padding: 42px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">RHOMBUS CLUB</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="events.html">Events</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="join-card">
+      <div class="symbol">◇</div>
+
+      <h1>JOIN <span>RHOMBUS</span></h1>
+
+      <div class="tagline">THINK • PLAY • SHINE</div>
+
+      <p class="description">
+        Ready to become part of RHOMBUS CLUB?
+        Visit our official Chess.com club and use the
+        membership invitation link to request to join.
+        Be part of the community, enjoy the game,
+        and keep improving your chess journey.
+      </p>
+
+      <a
+        class="join-button"
+        href="https://www.chess.com/club/rhombus-club/join/213d37?utm_campaign=club_invite_link&utm_source=chesscom&utm_medium=copy"
+        target="_blank"
+        rel="noopener noreferrer">
+        JOIN THE CLUB ON CHESS.COM
+      </a>
+
+      <p class="note">
+        Membership requests are handled through Chess.com.
+        You may need to sign in to continue.
+      </p>
+    </section>
+  </main>
+
+  <!-- PASTE THE EXISTING MUSIC PLAYER HTML BLOCK HERE -->
+
+  <footer>
+    RHOMBUS CLUB · FOUR SIDES. ONE STRATEGY. INFINITE POSSIBILITIES.
+  </footer>
+
+  <script src="music.js"></script>
+</body>
+</html>
