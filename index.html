@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090d">
+<meta name="description" content="Welcome to RHOMBUS CLUB — Think, Play, Shine. A chess community built around strategy, competition and friendship.">
+<title>RHOMBUS CLUB | Official Homepage</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #09090d;
+  --panel: #131017;
+  --red: #ed183c;
+  --red-dark: #8f0925;
+  --white: #f7f3f5;
+  --muted: #a49ba3;
+  --border: rgba(237,24,60,.25);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(140,0,35,.16), transparent 30%),
+    radial-gradient(circle at 10% 65%, rgba(90,0,25,.12), transparent 30%),
+    var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,9,13,.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  max-width: 1250px;
+  margin: auto;
+  padding: 19px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand span { color: var(--red); }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  align-items: center;
+  font-size: 12px;
+  color: #c9c0c6;
+}
+
+.nav-links a:hover { color: var(--red); }
+
+.nav-join {
+  border: 1px solid var(--red);
+  padding: 10px 17px;
+  color: white !important;
+  border-radius: 5px;
+  transition: .25s;
+}
+
+.nav-join:hover {
+  background: var(--red);
+  box-shadow: 0 0 20px rgba(237,24,60,.35);
+}
+
+.hero {
+  min-height: 650px;
+  max-width: 1250px;
+  margin: auto;
+  padding: 100px 25px 95px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 45px;
+  position: relative;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.13;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--red);
+  text-shadow: 0 0 30px rgba(237,24,60,.3);
+}
+
+.hero-subtitle {
+  color: #c1b7bf;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 560px;
+  margin: 27px 0 32px;
+}
+
+.actions {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 0 22px rgba(237,24,60,.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(237,24,60,.4);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.btn-outline:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.hero-art {
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.diamond {
+  width: 225px;
+  height: 225px;
+  border: 2px solid var(--red);
+  transform: rotate(45deg);
+  position: relative;
+  box-shadow:
+    0 0 30px rgba(237,24,60,.18),
+    inset 0 0 35px rgba(237,24,60,.12);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.diamond::before,
+.diamond::after {
+  content: "";
+  position: absolute;
+  inset: 25px;
+  border: 1px solid rgba(237,24,60,.65);
+}
+
+.diamond::after {
+  inset: 55px;
+  border-color: rgba(255,255,255,.35);
+}
+
+.diamond-core {
+  position: absolute;
+  transform: rotate(-45deg);
+  font-size: 92px;
+  color: white;
+  text-shadow: 0 0 30px var(--red);
+}
+
+.orbit {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(237,24,60,.2);
+  border-radius: 50%;
+}
+
+.orbit::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  top: 30px;
+  left: 40px;
+  box-shadow: 0 0 16px var(--red);
+}
+
+@keyframes pulse {
+  0%,100% { filter: brightness(.8); }
+  50% { filter: brightness(1.4); }
+}
+
+.section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 75px 25px;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-heading small {
+  color: var(--red);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(25px, 4vw, 37px);
+  margin-top: 13px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 12px;
+  max-width: 650px;
+  font-size: 14px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  background: linear-gradient(145deg, rgba(33,18,27,.92), rgba(14,13,18,.96));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 27px;
+  min-height: 195px;
+  transition: .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--red);
+  box-shadow: 0 12px 35px rgba(150,0,35,.13);
+}
+
+.card-icon {
+  font-size: 27px;
+  margin-bottom: 19px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 11px;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.card-link {
+  display: inline-block;
+  color: var(--red);
+  margin-top: 18px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.motto {
+  margin: 35px 25px;
+  padding: 65px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, transparent, rgba(150,0,35,.13), transparent);
+}
+
+.motto h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(24px, 5vw, 43px);
+  letter-spacing: 3px;
+}
+
+.motto h2 span { color: var(--red); }
+
+.motto p {
+  color: var(--muted);
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.join-section {
+  text-align: center;
+  padding: 85px 20px;
+  background: radial-gradient(ellipse at center, rgba(130,0,35,.22), transparent 65%);
+}
+
+.join-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(26px, 5vw, 43px);
+}
+
+.join-section p {
+  color: var(--muted);
+  margin: 20px auto 28px;
+  max-width: 550px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 2;
+}
+
+footer strong { color: white; }
+
+@media(max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 75px;
+  }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .actions { justify-content: center; }
+  .hero-art { min-height: 320px; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { gap: 12px; justify-content: flex-end; }
+}
+
+@media(max-width: 560px) {
+  .navbar { align-items: flex-start; flex-direction: column; }
+  .nav-links { justify-content: flex-start; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .hero { min-height: auto; }
+  .diamond { width: 175px; height: 175px; }
+  .diamond-core { font-size: 70px; }
+  .orbit { width: 270px; height: 270px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <a class="brand" href="index.html">RHOMBUS<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="achievements.html">ACHIEVEMENTS</a>
+      <a href="events.html">EVENTS</a>
+      <a href="partnerships.html">PARTNERS</a>
+      <a href="news.html">NEWS</a>
+      <a class="nav-join" href="join.html">JOIN THE CLUB ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">THE OFFICIAL RHOMBUS CLUB WEBSITE</div>
+
+    <h1>
+      THINK.<br>
+      PLAY.<br>
+      <span>SHINE.</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Welcome To RHOMBUS CLUB — A Chess Community Where Strategy,
+      Competition And Community Come Together. Discover Our Journey,
+      Explore Our Activities And Be Part Of The Experience.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary"
+         href="https://www.chess.com/club/rhombus-club"
+         target="_blank" rel="noopener">EXPLORE OUR CLUB ↗</a>
+
+      <a class="btn btn-outline" href="about.html">DISCOVER RHOMBUS</a>
+    </div>
+  </div>
+
+  <div class="hero-art" aria-label="Abstract geometric rhombus emblem">
+    <div class="orbit"></div>
+    <div class="diamond"></div>
+    <div class="diamond-core">♟</div>
+  </div>
+</section>
+
+<div class="motto">
+  <h2>FOUR SIDES. ONE STRATEGY.<br><span>INFINITE POSSIBILITIES.</span></h2>
+  <p>MORE THAN A CLUB. A CHESS COMMUNITY.</p>
+</div>
+
+<section class="section">
+  <div class="section-heading">
+    <small>EXPLORE RHOMBUS</small>
+    <h2>DISCOVER OUR WORLD</h2>
+    <p>
+      Explore The Different Dimensions Of RHOMBUS CLUB.
+      Every Section Has A Story To Tell.
+    </p>
+  </div>
+
+  <div class="feature-grid">
+
+    <article class="feature-card">
+      <div class="card-icon">♟</div>
+      <h3>About Us</h3>
+      <p>Discover Our Identity, Values, Vision And The Community Behind RHOMBUS CLUB.</p>
+      <a class="card-link" href="about.html">DISCOVER MORE →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">🏆</div>
+      <h3>Achievements</h3>
+      <p>Explore Club Milestones, Recognition And Memorable Moments From Our Journey.</p>
+      <a class="card-link" href="achievements.html">VIEW ACHIEVEMENTS →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">⚡</div>
+      <h3>Events & Tournaments</h3>
+      <p>Find Out About Club Activities, Chess Events And Competitive Opportunities.</p>
+      <a class="card-link" href="events.html">EXPLORE EVENTS →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">🤝</div>
+      <h3>Partnerships</h3>
+      <p>Discover Our Collaborations And The Communities We Connect With.</p>
+      <a class="card-link" href="partnerships.html">MEET OUR PARTNERS →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">◈</div>
+      <h3>News & Announcements</h3>
+      <p>Stay Updated With Club Announcements, Highlights And Important Updates.</p>
+      <a class="card-link" href="news.html">READ UPDATES →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">▣</div>
+      <h3>Gallery</h3>
+      <p>Explore Selected Visual Highlights And Memories From RHOMBUS CLUB.</p>
+      <a class="card-link" href="gallery.html">VIEW GALLERY →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">📊</div>
+      <h3>Club Statistics</h3>
+      <p>Explore Our Dedicated Statistics Dashboard And Club Growth Overview.</p>
+      <a class="card-link"
+         href="https://ashilanshad-dotcom.github.io/RHOMBUS-CLUB-STATS/"
+         target="_blank" rel="noopener">OPEN DASHBOARD ↗</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">♛</div>
+      <h3>Join RHOMBUS</h3>
+      <p>Become Part Of Our Chess Community And Take Your Place In The Club.</p>
+      <a class="card-link" href="join.html">JOIN THE COMMUNITY →</a>
+    </article>
+
+    <article class="feature-card">
+      <div class="card-icon">◆</div>
+      <h3>Our Identity</h3>
+      <p>Four Sides. One Strategy. Infinite Possibilities. That Is The RHOMBUS Spirit.</p>
+      <a class="card-link" href="about.html">OUR STORY →</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="join-section">
+  <div class="eyebrow">YOUR NEXT MOVE STARTS HERE</div>
+  <h2>READY TO JOIN THE RHOMBUS COMMUNITY?</h2>
+  <p>
+    Every Great Chess Journey Begins With A Move.
+    Make Yours With RHOMBUS CLUB.
+  </p>
+  <a class="btn btn-primary"
+     href="https://www.chess.com/club/rhombus-club/join/213d37?utm_campaign=club_invite_link&utm_source=chesscom&utm_medium=copy"
+     target="_blank" rel="noopener">JOIN RHOMBUS CLUB ↗</a>
+</section>
+
+</main>
+
+<footer>
+  <strong>RHOMBUS CLUB</strong><br>
+  THINK • PLAY • SHINE<br>
+  Four Sides. One Strategy. Infinite Possibilities.<br><br>
+  <a href="https://www.chess.com/club/rhombus-club"
+     target="_blank" rel="noopener">CHESS.COM CLUB</a>
+  &nbsp; | &nbsp;
+  <a href="https://ashilanshad-dotcom.github.io/RHOMBUS-CLUB-STATS/"
+     target="_blank" rel="noopener">STATISTICS</a>
+  <br><br>
+  © 2026 RHOMBUS CLUB. ALL RIGHTS RESERVED.
+</footer>
+
+</body>
+</html>
