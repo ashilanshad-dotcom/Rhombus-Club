@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ashilanshad-dotcom.github.io/Rhombus-Club/sitemap.xml
